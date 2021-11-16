@@ -1,6 +1,4 @@
 import React from 'react'
-import logo from "../../static/images/logo_2x.png";
-import Cart from '../../static/images/cart.svg';
 import Grid from '@material-ui/core/Grid';
 import {Link} from 'react-router-dom'
 import {useSelector,useDispatch} from 'react-redux';
@@ -17,7 +15,7 @@ const Header = () => {
     return (
         <Grid className="headerWrapper bottomShadow" container>
             <Grid item xs={2}>
-                <img className="headerLogo" alt="site logo" src={logo}/>
+                <img className="headerLogo" alt="site logo" src="static\images\logo_2x.png"/>
             </Grid>
             <Grid className="navigationLinks" item xs={6}>
                 <Grid container>
@@ -35,7 +33,7 @@ const Header = () => {
                     <div className="cartMsg">
                         <span>{cartItemCount}</span>items
                     </div>
-                    <img className="cartIcon" alt="cart icon" src={Cart} width="30"/>
+                    <img className="cartIcon" alt="cart icon" src="static\images\cart.svg" width="30"/>
                 </div>
             </Grid>
         </Grid>

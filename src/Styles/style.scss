@@ -1,3 +1,6 @@
+$tablet-width: 769px;
+$desktop-width: 1025px;
+
 .headerWrapper {
     position: sticky;
     top: 0;
@@ -7,7 +10,14 @@
     margin-bottom: 20px;
 
     .headerLogo {
-        width: 40%;
+        width: 100%;
+        @media (min-width:$tablet-width) {
+            width: 55%;
+        }
+        @media (min-width:$desktop-width) {
+            width: 40%;
+        }
+        
         padding-left: 5%;
     }
 
@@ -35,21 +45,36 @@
 }
 
 .bottomShadow {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+}
+.homePage{
+    @media (min-width:$desktop-width) {
+        margin: 0 3%;
+    }
+    .SliderWrapper{
+        margin-bottom: 3%;
+        .bannerImgWrapper {
+            text-align: center;
+            margin-bottom: 10px;
+            img{
+                width: 100%;
+            }
+        }
+    }
 }
 
-.bannerImgWrapper {
-    text-align: center;
-    margin-bottom: 10px;
-}
 
 .footer {
     background-color: #e2e2e2;
     padding: 5px 10px;
+    text-align: center;
 }
 
 .plp {
-    margin: 0 3%;
+    @media (min-width:$desktop-width) {
+        margin: 0 3%;
+    }
+    
     .listingSection {
         display: inline-block;
         width: 80%;
@@ -210,6 +235,30 @@
             }
         }
     }
+    .proceedWrapper{
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        padding: 10px;
+        text-align: center;
+        .checkoutBtn{
+            width: 100%;
+            color: #fff;
+            background: #d00155;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border:none
+        }
+    }
+    .emptyCartMsg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        flex-direction: column;
+    }
+
 }
 
 .App {

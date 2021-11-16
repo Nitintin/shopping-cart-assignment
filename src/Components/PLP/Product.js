@@ -7,7 +7,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Coke from '../../static/images/products/beverages/coke.jpg'
 import { useDispatch } from 'react-redux'
 import * as AllActions from '../../Action/action'
 
@@ -15,7 +14,7 @@ const Product = ({ productDetail }) => {
     const dispatch = useDispatch();
 
     return (
-        <Grid className="productCard" item xs={3}>
+        <Grid className="productCard" item md={6} sm={12} lg={3}>
             <Card >
                 <CardActionArea>
                     <CardContent>
@@ -23,7 +22,7 @@ const Product = ({ productDetail }) => {
                             {productDetail.name}
                         </Typography>
                         <CardMedia
-                            image={Coke}
+                            image={productDetail.imageURL}
                             title={productDetail.name}
                             className="productImg"
                         />
