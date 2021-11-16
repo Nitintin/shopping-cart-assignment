@@ -1,9 +1,15 @@
-export function productReducer(defStore = [], action) {
+export function productReducer(productData = {}, action) {
     switch (action.type) {
-        case "SAVE_PRODUCT_DATA": console.log("SAVE_PRODUCT_DATA reducer");
-            return [...action.payload];
+        case "SAVE_PRODUCT_DATA": 
+            return {...productData,data:action.payload};
+
+        case "SET_FILTER_DATA":
+            return {...productData,isFiltered:true,filterCategory:action.payload}
+
+        case "REMOVE_FILTER":
+            return {...productData,isFiltered:false,filterCategory:""}
 
         default: console.log("default product reducer");
-            return defStore;
+            return productData;
     }
 }

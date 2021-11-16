@@ -36,7 +36,7 @@ const Product = ({ productDetail }) => {
                     <Typography >
                        <small> MRP Rs.{productDetail.price}</small>
                     </Typography>
-                    <Button size="small" className="addToBagBtn" onClick={() => dispatch(AllActions.addToCart(productDetail))}>
+                    <Button size="small" className="addToBagBtn" onClick={() => dispatch(AllActions.addToCartFromPLP(productDetail))}>
                         Buy Now
                     </Button>
                 </CardActions>

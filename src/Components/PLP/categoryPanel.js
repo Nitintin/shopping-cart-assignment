@@ -11,7 +11,11 @@ const CategoryPanel = () => {
     },[dispatch])
 
     const showCategories=()=>{
-        const category = categories.map(item => <li key={item.id} className="categoryItem" >
+        const category = categories.map(item => 
+        <li 
+            key={item.id} 
+            className="categoryItem"
+            onClick={()=>dispatch(AllActions.setFilterData(item.id))} >
             {item.name}
         </li>);
         return category;

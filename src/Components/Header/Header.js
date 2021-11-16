@@ -22,10 +22,10 @@ const Header = () => {
             <Grid className="navigationLinks" item xs={6}>
                 <Grid container>
                     <Grid item xs={6}>
-                        <Link to="/"><span>Home</span></Link>
+                        <Link to="/" onClick={()=> dispatch(AllActions.removeFilter())}><span>Home</span></Link>
                     </Grid>
                     <Grid item xs={6}>
-                        <Link to="/products"><span>Products</span></Link>
+                        <Link to="/products" onClick={()=> dispatch(AllActions.removeFilter())}><span>Products</span></Link>
                     </Grid>
                 </Grid>
             </Grid>

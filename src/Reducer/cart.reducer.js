@@ -38,8 +38,11 @@ export function cartReducer(cartData = {}, action) {
             }
 
         case "SHOW_HIDE_CART":
-            console.log(!cartData.showCart);
             return { ...cartData, showCart: !cartData.showCart };
+
+        case "ADD_TO_CART_SUCCESS":
+            return { ...cartData, addSuccess:!cartData.addSuccess};
+            
         default:
             return cartData
     }
