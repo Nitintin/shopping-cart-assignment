@@ -26,7 +26,7 @@ const Cart = () => {
                                 <ul className="cartList">
                                     {cartData.data.map(item => <li className="cartItem" key={item.id}>
                                         <div className="cartImgCotainer">
-
+                                            <img src={item.imageURL} alt="cart product" />
                                         </div>
                                         <div className="cartItemDetail">
                                             <div className="description"><b>{item.name}</b></div>
@@ -55,7 +55,7 @@ const Cart = () => {
                                 </ul>
                                 <div className="lowPrice">
                                     <div className="imgContainer">
-                                        <img src="LowestPrice" alt="low price" />
+                                        <img src="static\images\lowest-price.png" alt="low price" />
                                     </div>
                                     <span>You wont find it cheaper anywhere</span>
                                 </div>

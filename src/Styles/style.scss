@@ -7,8 +7,6 @@ $desktop-width: 1025px;
     background-color: #fff;
     z-index: 3;
     padding-top: 10px;
-    margin-bottom: 20px;
-
     .headerLogo {
         width: 100%;
         @media (min-width:$tablet-width) {
@@ -27,6 +25,7 @@ $desktop-width: 1025px;
         a {
             text-decoration: none;
             color: #000;
+            font-size: 22px
         }
     }
 
@@ -45,7 +44,7 @@ $desktop-width: 1025px;
 }
 
 .bottomShadow {
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 15px -6px rgba(0, 0, 0, 0.4);
 }
 .homePage{
     @media (min-width:$desktop-width) {
@@ -58,6 +57,34 @@ $desktop-width: 1025px;
             margin-bottom: 10px;
             img{
                 width: 100%;
+            }
+        }
+    }
+    .categoryRecomendations{
+        .homeCategory{
+            display: flex;
+            margin: 5%;
+            padding: 3%;
+            img{
+                width: 50%;
+            }
+            .heading,.description{
+                margin: 10px;
+            }
+            .heading{
+                font-weight: 500;
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+                background-color: #d00155;
+                padding: 10px;
+                border-radius: 5px;
+                border:none
+            }
+            div{
+                text-align: center;
+                width: 50%;
             }
         }
     }
@@ -79,6 +106,7 @@ $desktop-width: 1025px;
         display: inline-block;
         width: 80%;
         min-height: 600px;
+        margin-top: 2%;
 
         .productListing {
             .addSuccessMsg {
@@ -106,7 +134,7 @@ $desktop-width: 1025px;
                     text-overflow: hidden;
                 }
                 .productImg {
-                    height: 190px;
+                    height: 160px;
                     margin-bottom: 10px;
                 }
                 .productActionArea {
@@ -133,7 +161,7 @@ $desktop-width: 1025px;
         margin-bottom: 5%;
 
         .categoryItem {
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid grey;
             padding: 10px;
             &:hover{
                 cursor: pointer;
@@ -190,14 +218,23 @@ $desktop-width: 1025px;
         height: 300px;
         overflow-y: auto;
         padding: 0;
-
         .cartItem {
             background-color: #fff;
             margin-bottom: 10px;
             padding: 10px;
+            display: flex;
+            .cartImgCotainer{
+                width: 15%;
+                img{
+                    width: 100%;
+                }
+            }
             .cartItemDetail {
+                width: 85%;
+                padding: 0 10px;
                 .cartItemQuantity {
                     display: flex;
+                    justify-content: space-evenly;
                     .count {
                         margin: 0 10px;
                     }
@@ -215,7 +252,7 @@ $desktop-width: 1025px;
                     }
                     .crossSign,
                     .singleItemPrice {
-                        margin: 0 10%;
+                        margin: 0 5%;
                     }
                     .totalItemPrice {
                         margin-left: 5%;
