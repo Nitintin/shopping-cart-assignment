@@ -1,0 +1,215 @@
+.headerWrapper {
+    position: sticky;
+    top:0;
+    background-color: #fff;
+    z-index: 3;
+    padding-top: 10px;
+    margin-bottom: 20px;
+
+    .headerLogo {
+        width: 40%;
+        padding-left: 5%;
+    }
+
+    .navigationLinks {
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    .cartWrapper {
+        float: right;
+
+        .cartMsg {
+            text-align: right;
+            display: inline-block;
+        }
+
+        .cartIcon {
+            float: right;
+        }
+    }
+
+}
+
+.bottomShadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bannerImgWrapper {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: #e2e2e2;
+    padding: 5px 10px;
+}
+
+.plp {
+    margin: 0 3%;
+    .listingSection {
+        display: inline-block;
+        width: 80%;
+
+        .productListing {
+            .productCard {
+                padding: 20px;
+                .productHeading{
+                    word-break: break-all;
+                    height: 95px;
+                    overflow: hidden;
+                    text-overflow: hidden;
+                }
+                .productImg{
+                    height: 190px;
+                    margin-bottom: 10px;
+                }
+                .productActionArea{
+                    justify-content: space-between;
+                    .addToBagBtn{
+                        color: #fff;
+                        background-color: #D00155;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .categoryList {
+        list-style: none;
+        background-color: #e2e2e2;
+        width: 20%;
+        float: left;
+        padding: 0;
+        margin: 0;
+        position: sticky;
+        height: 100vh;
+        top: 50px;
+        margin-bottom: 5%;
+
+        .categoryItem {
+            border-bottom: 1px solid black;
+            padding: 10px;
+        }
+    }
+}
+
+
+
+
+
+.loginWrapper {
+    padding: 5% 10%;
+
+    .leftComponent {
+        width: 50%;
+        display: inline-block;
+    }
+
+    .rightComponent {
+        width: 50%;
+        display: inline-block;
+    }
+}
+
+.MiniCartWrapper {
+    position: fixed;
+    top: 50px;
+    right: 3%;
+    z-index: 3;
+    background-color: #e2e2e2;
+    border: 1px solid black;
+    height: fit-content;
+    width: 450px;
+    min-height: 90%;
+
+    .cartHeading {
+        background-color: #000;
+        color: #fff;
+        padding: 3%;
+
+        .headerTxt {
+            display: inline-block;
+        }
+
+        .closeCartBtn {
+            float: right;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .cartList {
+        list-style: none;
+        height: 300px;
+        overflow-y: auto;
+        padding: 0;
+
+        .cartItem {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            .cartItemDetail{
+                .cartItemQuantity{
+                    display: flex;
+                    .count{
+                        margin: 0 10px;
+                    }
+                    .cartCTA{
+                        display: flex;
+                        justify-content: center;
+                        border-radius: 50%;
+                        width: 25px;
+                        height: 25px;
+                        color: #fff;
+                        background-color: #D00155;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                    .crossSign,.singleItemPrice{
+                        margin:0 10%
+                    }
+                    .totalItemPrice{
+                        margin-left: 5%;
+                    }
+                }
+            }
+        }
+    }
+    .lowPrice{
+        padding: 10px;
+        margin:10px;
+        background-color: #fff;
+        .imgContainer{
+            display: inline-block;
+            img{
+                width: 80%;
+            }
+        }
+    }
+}
+
+.App {
+    .overlayVisible {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 2;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
