@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Slider from "react-slick";
 import * as AllAction from "../../Action/action";
 import { Link } from 'react-router-dom'
-
+//625992014937-82ftomps5nv45jlo5q4as84q902f58kj.apps.googleusercontent.com
 const Home = () => {
     const dispatch = useDispatch();
     const bannerData = useSelector(state => state.bannerData);

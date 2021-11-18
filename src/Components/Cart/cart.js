@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import * as AllActions from '../../Action/action'
-// import LowestPrice from '../../static/images/lowest-price.png'
 
 const Cart = () => {
     const cartData = useSelector(store => store.cartData);

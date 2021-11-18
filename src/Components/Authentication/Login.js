@@ -2,6 +2,7 @@ import React from 'react'
 import TextField from '@material-ui/core/TextField';
 import * as AllAction from "../../Action/action";
 import {useDispatch,useSelector} from 'react-redux'
+import GoogleAuth from './GoogleAuth';
 
 const Login = () => {
 
@@ -43,7 +44,10 @@ const Login = () => {
                     /><br />
                     <button >LOGIN</button>
                 </form>
+                <div className="dividerText">or</div>
+                <GoogleAuth/>
             </div>
+            
         </div>
     )
 }
