@@ -9,7 +9,7 @@ export function productReducer(productData = {}, action) {
         case "REMOVE_FILTER":
             return {...productData,isFiltered:false,filterCategory:""}
 
-        default: console.log("default product reducer");
+        default:
             return productData;
     }
 }

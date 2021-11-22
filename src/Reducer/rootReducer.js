@@ -5,7 +5,6 @@ import {categoryReducer} from './category.reducer'
 import {productReducer} from './product.reducer'
 import { isLoading } from './loading.reducer'
 import {cartReducer} from './cart.reducer'
-import { isSignedIn } from './authentication.reducer'
 
 const rootReducer = combineReducers({ 
     registeredUsers: registeredUsers,
@@ -13,8 +12,7 @@ const rootReducer = combineReducers({
     productData:productReducer,
     categoryData:categoryReducer,
     cartData:cartReducer,
-    isLoading:isLoading,
-    isSignedIn:isSignedIn
+    isLoading:isLoading
 });
 
 export default rootReducer

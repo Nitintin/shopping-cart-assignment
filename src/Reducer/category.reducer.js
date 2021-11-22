@@ -3,7 +3,7 @@ export function categoryReducer(defStore = [], action) {
         
         case "SAVE_CATEGORY_DATA":
             return [...action.payload];
-        default: console.log("default category reducer");
+        default: 
             return defStore;
     }
 }

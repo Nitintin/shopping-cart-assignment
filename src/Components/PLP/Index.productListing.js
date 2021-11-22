@@ -1,29 +1,39 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
 import ProductList from './ProductList'
 import CategoryPanel from './categoryPanel'
-import { Navigate } from 'react-router'
+import { useNavigate } from 'react-router';
 
 const IndexproductListing = () => {
-    const auth = window.gapi.auth2.getAuthInstance();
+    let navigate = useNavigate();
+    const [isLoading,setIsLoading]=useState(true);
 
-    const checkAuthentication = () => {
+    useEffect(() => {
+        window.gapi.load('client:auth2', () => {
+            window.gapi.client.init({
+                clientId: '625992014937-82ftomps5nv45jlo5q4as84q902f58kj.apps.googleusercontent.com',
+                scope: 'email'
+            }).then(() => {
+                const auth = window.gapi.auth2.getAuthInstance();
+                if (!auth.isSignedIn.get()) {
+                    navigate('/login?error=loginRequired');
+                }else{
+                    setIsLoading(false);
+                }
+            })
+        })
+    }, [navigate]);
 
-        if (auth.isSignedIn.get()) {
-            return <>
-                        <main className="plp">
-                            <CategoryPanel />
-                            <ProductList />
-                        </main>
-                    </>
-        } else {
-            return <Navigate to="/login" />
-        }
-
+    if(isLoading){
+        return ""
+    }else{
+        return (
+            <main className="plp">
+                <CategoryPanel />
+                <ProductList />
+            </main>
+        )
     }
-
-    return (
-        checkAuthentication()
-    )
+    
 }
 
 export default IndexproductListing

@@ -2,7 +2,6 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid';
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
-import GoogleAuth from '../Authentication/GoogleAuth'
 import * as AllActions from '../../Action/action'
 
 const Header = () => {
@@ -29,13 +28,13 @@ const Header = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={3}>
-                    <GoogleAuth />
+                <Grid className="headerCTA" item xs={3}>
+                    <Link to="/login" className="headerSignOut">SignIn / SignOut</Link>
                     <div className="cartWrapper" onClick={() => dispatch(AllActions.toggleCart())}>
                         <div className="cartMsg">
-                            <span>{cartItemCount}</span>items
+                            <span>{cartItemCount}</span> items
                         </div>
-                        <img className="cartIcon" alt="cart icon" src="static\images\cart.svg" width="30" />
+                        <img className="cartIcon" alt="cart icon" src="static\images\cart.svg" width="22" />
                     </div>
                 </Grid>
             </Grid>

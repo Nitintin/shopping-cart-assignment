@@ -5,6 +5,7 @@ import * as AllActions from '../../Action/action'
 const Cart = () => {
     const cartData = useSelector(store => store.cartData);
     let cartItemCount = 0;
+    let cartTotalCost = 0;
     for (let i = 0; i < cartData.data.length; i++) {
         cartItemCount += cartData.data[i].count;
     }
@@ -23,7 +24,9 @@ const Cart = () => {
                         {   cartItemCount ?
                             <>
                                 <ul className="cartList">
-                                    {cartData.data.map(item => <li className="cartItem" key={item.id}>
+                                    {cartData.data.map(item => {
+                                        cartTotalCost+=item.count*item.price;
+                                    return(<li className="cartItem" key={item.id}>
                                         <div className="cartImgCotainer">
                                             <img src={item.imageURL} alt="cart product" />
                                         </div>
@@ -45,12 +48,10 @@ const Cart = () => {
                                                 </div>
                                                 <span className="crossSign"> X </span>
                                                 <div className="singleItemPrice"> Rs. {item.price}</div>
-                                                <div className="totalItemPrice"> Rs. {item.price * item.count}</div>
+                                                <div className="totalItemPrice"> Rs. {item.price * item.count} </div>
                                             </div>
-
-
                                         </div>
-                                    </li>)}
+                                    </li>)})}
                                 </ul>
                                 <div className="lowPrice">
                                     <div className="imgContainer">
@@ -60,7 +61,7 @@ const Cart = () => {
                                 </div>
                                 <div className="proceedWrapper">
                                     <span>Promo code can be applied on promo page</span>
-                                    <button className="checkoutBtn">PROCEED TO CHECKOUT <i class="fas fa-arrow-right"></i></button>
+                                    <button className="checkoutBtn">PROCEED TO CHECKOUT ( Rs. {cartTotalCost} ) <i class="fas fa-arrow-right"></i> </button>
                                 </div>
                             </>
                             :

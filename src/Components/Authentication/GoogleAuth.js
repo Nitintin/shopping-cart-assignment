@@ -1,7 +1,9 @@
 import React,{useEffect, useState} from 'react'
+import { useNavigate } from 'react-router';
 
 const GoogleAuth = () => {
     const [isSignedIn,setIsSignedIn] = useState(null);
+    let navigate = useNavigate();
     
     useEffect(()=>{
         window.gapi.load('client:auth2',()=>{
@@ -19,6 +21,9 @@ const GoogleAuth = () => {
     const checkAuthStateChange = ()=>{
         const auth = window.gapi.auth2.getAuthInstance();
         setIsSignedIn(auth.isSignedIn.get());
+        if(auth.isSignedIn.get()){
+            navigate('/products');
+        }
     }
 
     const handleSignIn=()=>{

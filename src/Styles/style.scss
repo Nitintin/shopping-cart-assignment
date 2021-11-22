@@ -6,7 +6,8 @@ $desktop-width: 1023px;
     top: 0;
     background-color: #fff;
     z-index: 3;
-    padding-top: 10px;
+    padding: 10px 0;
+    align-items: center;
     .headerLogo {
         width: 100%;
         @media (min-width: $tablet-width) {
@@ -29,18 +30,30 @@ $desktop-width: 1023px;
         }
     }
 
-    .cartWrapper {
-        float: right;
-
-        .cartMsg {
-            text-align: right;
-            display: inline-block;
+    .headerCTA{
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        .headerSignOut{
+            text-decoration: none;
+            color: black;
+            font-size: 0.8em;
         }
-
-        .cartIcon {
+        .cartWrapper {
             float: right;
+    
+            .cartMsg {
+                text-align: right;
+                display: inline-block;
+            }
+    
+            .cartIcon {
+                float: right;
+            }
         }
     }
+
+    
 }
 
 .bottomShadow {
@@ -213,10 +226,11 @@ $desktop-width: 1023px;
 
 .loginWrapper {
     padding: 5% 10%;
+    height: 80vh;
 
     .leftComponent {
-        width: 50%;
         display: inline-block;
+        width: 50%;
     }
 
     .rightComponent {
@@ -239,6 +253,15 @@ $desktop-width: 1023px;
                 padding: 10px;
                 border: none;
             }
+        }
+        button{
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background-color: #d00155;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
         }
     }
 }
