@@ -22,11 +22,13 @@ const Login = () => {
         }
     }
     return (
-        <div className="loginWrapper">
-            <div className="leftComponent">
-                <h3>LOGIN</h3>
-                <p>Get access to your orders, wishlist and recommendations</p>
-            </div>
+        <main className="loginWrapper">
+            <article>
+                <div className="leftComponent">
+                    <h3>LOGIN</h3>
+                    <p>Get access to your orders, wishlist and recommendations</p>
+                </div>
+            </article>
             <div className="rightComponent">
                 <form onSubmit={(e)=>handleLoginSubmit(e)}>
                     <TextField
@@ -48,7 +50,7 @@ const Login = () => {
                 <GoogleAuth/>
             </div>
             
-        </div>
+        </main>
     )
 }
 

@@ -22,30 +22,36 @@ const CategoryPanel = () => {
     }
 
     return (
-        <div className="categoryPanel">
-            <ul className="desktopCategoryList categoryList">
-                {showCategories()}
-            </ul>
-            <div className="mobileCategoryList">
-                <Accordion>
-                    <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
-                        className="accordionSummary"
-                    >
-                        <Typography>Category List</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails className="accordionDetails">
-                        {
-                            <ul className="categoryList">
-                                {showCategories()}
-                            </ul>
-                        }
-                    </AccordionDetails>
-                </Accordion>
-            </div>
-        </div>
+        <>
+            <aside className="categoryPanel">
+                <ul className="desktopCategoryList categoryList">
+                    {showCategories()}
+                </ul>
+                <div className="mobileCategoryList">
+                    <Accordion>
+                        <details>
+                            <summary>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                    className="accordionSummary"
+                                >
+                                    <Typography>Category List</Typography>
+                                </AccordionSummary>
+                            </summary>
+                            <AccordionDetails className="accordionDetails">
+                                {
+                                    <ul className="categoryList">
+                                        {showCategories()}
+                                    </ul>
+                                }
+                            </AccordionDetails>
+                        </details>
+                    </Accordion>
+                </div>
+            </aside>
+        </>
     )
 }
 

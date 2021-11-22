@@ -38,7 +38,7 @@ const GoogleAuth = () => {
         else if(isSignedIn){
             return <button className="signOutBtn" onClick={handleSignIn}>Sign Out</button>
         }else{
-            return <button className="signInBtn" onClick={handleSignIn}>Sign in with google <i class="fab fa-google"></i></button>
+            return <button className="signInBtn" onClick={handleSignIn}>Sign in with google <i className="fab fa-google"></i></button>
         }
     }
     return (

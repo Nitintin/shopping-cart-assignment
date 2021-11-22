@@ -14,31 +14,32 @@ const Header = () => {
     const dispatch = useDispatch();
 
     return (
-        <Grid className="headerWrapper bottomShadow" container>
-            <Grid item xs={2}>
-                <img className="headerLogo" alt="site logo" src="static\images\logo_2x.png" />
-            </Grid>
-            <Grid className="navigationLinks" item xs={6}>
-                <Grid container>
-                    <Grid item xs={6}>
-                        <Link to="/" onClick={() => dispatch(AllActions.removeFilter())}><span>Home</span></Link>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Link to="/products" onClick={() => dispatch(AllActions.removeFilter())}><span>Products</span></Link>
+        <header>
+            <Grid className="headerWrapper bottomShadow" container>
+                <Grid item xs={2}>
+                    <img className="headerLogo" alt="site logo" src="static\images\logo_2x.png" />
+                </Grid>
+                <Grid className="navigationLinks" item xs={6}>
+                    <Grid container>
+                        <Grid item xs={6}>
+                            <Link to="/" onClick={() => dispatch(AllActions.removeFilter())}><span>Home</span></Link>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Link to="/products" onClick={() => dispatch(AllActions.removeFilter())}><span>Products</span></Link>
+                        </Grid>
                     </Grid>
                 </Grid>
-            </Grid>
-            <Grid item xs={3}>
-                <GoogleAuth/>
-                <div className="cartWrapper" onClick={() => dispatch(AllActions.toggleCart())}>
-
-                    <div className="cartMsg">
-                        <span>{cartItemCount}</span>items
+                <Grid item xs={3}>
+                    <GoogleAuth />
+                    <div className="cartWrapper" onClick={() => dispatch(AllActions.toggleCart())}>
+                        <div className="cartMsg">
+                            <span>{cartItemCount}</span>items
+                        </div>
+                        <img className="cartIcon" alt="cart icon" src="static\images\cart.svg" width="30" />
                     </div>
-                    <img className="cartIcon" alt="cart icon" src="static\images\cart.svg" width="30" />
-                </div>
+                </Grid>
             </Grid>
-        </Grid>
+        </header>
     )
 }
 

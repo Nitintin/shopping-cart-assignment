@@ -13,7 +13,8 @@ let defaultStore = {
     productData:{data:[],isFiltered:false,filterCategory:""},
     categoryData:[],
     cartData:{data:[],showCart:false,addSuccess:false},
-    isLoading:false
+    isLoading:false,
+    isSignedIn:false
 }
 
 export default defaultStore;

@@ -14,33 +14,35 @@ const Product = ({ productDetail }) => {
     const dispatch = useDispatch();
 
     return (
-        <Grid className="productCard" item md={6} sm={12} lg={3}>
-            <Card >
-                <CardActionArea>
-                    <CardContent>
-                        <Typography gutterBottom variant="h6" component="h3" className="productHeading">
-                            {productDetail.name}
+        <>
+            <Grid className="productCard" item md={6} sm={12} lg={3}>
+                <Card >
+                    <CardActionArea>
+                        <CardContent>
+                            <Typography gutterBottom variant="h6" component="h3" className="productHeading">
+                                {productDetail.name}
+                            </Typography>
+                            <CardMedia
+                                image={productDetail.imageURL}
+                                title={productDetail.name}
+                                className="productImg"
+                            />
+                            <Typography variant="body2" color="textSecondary" component="p">
+                                {productDetail.description.slice(0, 85)}
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions className="productActionArea">
+                        <Typography >
+                            <small> MRP Rs.{productDetail.price}</small>
                         </Typography>
-                        <CardMedia
-                            image={productDetail.imageURL}
-                            title={productDetail.name}
-                            className="productImg"
-                        />
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            {productDetail.description.slice(0, 85)}
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions className="productActionArea">
-                    <Typography >
-                       <small> MRP Rs.{productDetail.price}</small>
-                    </Typography>
-                    <Button size="small" className="addToBagBtn" onClick={() => dispatch(AllActions.addToCartFromPLP(productDetail))}>
-                        Buy Now
-                    </Button>
-                </CardActions>
-            </Card>
-        </Grid>
+                        <Button size="small" className="addToBagBtn" onClick={() => dispatch(AllActions.addToCartFromPLP(productDetail))}>
+                            Buy Now
+                        </Button>
+                    </CardActions>
+                </Card>
+            </Grid>
+        </>
     )
 }
 

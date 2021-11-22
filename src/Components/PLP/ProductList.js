@@ -29,12 +29,14 @@ const ProductList = () => {
     }
 
     return (
-        <div className="listingSection">
-            <Grid container className="productListing">
-                {showProducts()}
-                <div className={cartDataVisible + " addSuccessMsg"}>Product added to cart successfully</div>
-            </Grid>
-        </div>
+        <>
+            <section className="listingSection">
+                <Grid container className="productListing">
+                    {showProducts()}
+                    <div className={cartDataVisible + " addSuccessMsg"}>Product added to cart successfully</div>
+                </Grid>
+            </section>
+        </>
     )
 }
 

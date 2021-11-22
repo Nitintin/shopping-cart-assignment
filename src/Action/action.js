@@ -52,6 +52,18 @@ export function toggleCart(){
     return {type:"SHOW_HIDE_CART"}
 }
 
+export function signInClick(){
+    return {type:"SIGN_IN_CLICK"}
+}
+
+export function signOutClick(){
+    return {type:"SIGN_OUT_CLICK"}
+}
+
+export function checkLoginChange(currLoginState){
+    return {type:"CHECK_LOGIN_CHANGE",payload:currLoginState}
+}
+
 export function addToCartFromPLP(prodDetail){
     return function(dispatch){
         axios.post(fetch_URL+"addtocart")

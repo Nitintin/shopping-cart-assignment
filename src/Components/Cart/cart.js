@@ -13,7 +13,7 @@ const Cart = () => {
         <div className="cartDisplay">
             {
                 cartData.showCart ?
-                    <div className="MiniCartWrapper">
+                    <section className="MiniCartWrapper">
                         <div className="cartHeading">
                             <div className="headerTxt">
                                 My Cart ( {cartItemCount} items)
@@ -60,7 +60,7 @@ const Cart = () => {
                                 </div>
                                 <div className="proceedWrapper">
                                     <span>Promo code can be applied on promo page</span>
-                                    <button className="checkoutBtn">PROCEED TO CHECKOUT </button>
+                                    <button className="checkoutBtn">PROCEED TO CHECKOUT <i class="fas fa-arrow-right"></i></button>
                                 </div>
                             </>
                             :
@@ -70,7 +70,7 @@ const Cart = () => {
                                 <small>Your favourite items just a click away</small>
                             </div>
                         }
-                    </div>
+                    </section>
                     : ""
             }
         </div>

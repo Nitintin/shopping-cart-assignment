@@ -83,15 +83,16 @@ $desktop-width: 1023px;
                 border-radius: 5px;
                 border: none;
             }
-            .homeCategoryImg,.homeCategoryText {
+            .homeCategoryImg,
+            .homeCategoryText {
                 text-align: center;
                 width: 50%;
             }
-            .homeCategoryImg{
+            .homeCategoryImg {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                img{
+                img {
                     width: 100%;
                     @media (min-width: $desktop-width) {
                         width: 50%;
@@ -161,7 +162,7 @@ $desktop-width: 1023px;
             }
         }
     }
-    .categoryPanel{
+    .categoryPanel {
         .desktopCategoryList {
             display: none;
             background-color: #e2e2e2;
@@ -175,15 +176,19 @@ $desktop-width: 1023px;
                 display: inline-block;
             }
         }
-        .mobileCategoryList{
-            .accordionSummary{
-                background-color: #d00155;
-                color: #fff;
-                font-weight: 500;
+        .mobileCategoryList {
+            summary {
+                list-style: none;
+                .accordionSummary {
+                    background-color: #d00155;
+                    color: #fff;
+                    font-weight: 500;
+                }
             }
-            .accordionDetails{
+
+            .accordionDetails {
                 justify-content: center;
-                p{
+                p {
                     width: -webkit-fill-available;
                 }
             }
@@ -191,7 +196,7 @@ $desktop-width: 1023px;
                 display: none;
             }
         }
-        .categoryList{
+        .categoryList {
             list-style: none;
             padding: 0;
             margin: 0;
@@ -203,7 +208,6 @@ $desktop-width: 1023px;
                 }
             }
         }
-        
     }
 }
 
@@ -222,14 +226,14 @@ $desktop-width: 1023px;
         float: right;
         justify-content: space-around;
         align-items: center;
-        .googleAuthWrapper{
-            .signOutBtn{
+        .googleAuthWrapper {
+            .signOutBtn {
                 background-color: grey;
                 color: #fff;
                 padding: 10px;
             }
-            .signInBtn{
-                background-color: #FF0000;
+            .signInBtn {
+                background-color: #ff0000;
                 border-radius: 5px;
                 color: #fff;
                 padding: 10px;
@@ -242,13 +246,13 @@ $desktop-width: 1023px;
 .MiniCartWrapper {
     position: fixed;
     top: 0;
-    
+
     z-index: 3;
     background-color: #e2e2e2;
     border: 1px solid black;
     height: 100vh;
     width: 100%;
-    
+
     min-height: 90%;
     @media (min-width: $desktop-width) {
         top: 50px;
@@ -256,7 +260,6 @@ $desktop-width: 1023px;
         right: 3%;
         height: fit-content;
     }
-
 
     .cartHeading {
         background-color: #000;
@@ -295,6 +298,9 @@ $desktop-width: 1023px;
             .cartItemDetail {
                 width: 85%;
                 padding: 0 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
                 .cartItemQuantity {
                     display: flex;
                     justify-content: space-evenly;
@@ -341,6 +347,7 @@ $desktop-width: 1023px;
         bottom: 0;
         padding: 10px;
         text-align: center;
+        width: -webkit-fill-available;
         .checkoutBtn {
             width: 100%;
             color: #fff;
